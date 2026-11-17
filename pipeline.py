@@ -8,5 +8,6 @@ def extract(ticker_symbol): #created a function(recipe) to extract the ticker sy
     return data
 
 raw_data = extract(ticker_symbol)
+raw_data.columns = raw_data.columns.droplevel(1)
 
-print(raw_data)
+print(raw_data.columns)
