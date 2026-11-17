@@ -5,6 +5,8 @@ ticker_symbol = "MSFT" #Created a variable for the ticker we will use from yfina
 
 def extract(ticker_symbol): #created a function(recipe) to extract the ticker symbol
     data = yf.download(ticker_symbol, period = "10mo") #inside the function we call yfinances download funtion to download data from yahoo finance
-    print(data) #this line prints data
+    return data
 
-extract(ticker_symbol) #this line ecalls the function
+raw_data = extract(ticker_symbol)
+
+print(raw_data)
